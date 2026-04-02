@@ -18,3 +18,4 @@ hello:
     - echo "Branch = $CI_COMMIT_BRANCH"
     - echo "SHA = $CI_COMMIT_SHA"
     - echo "Source = $CI_PIPELINE_SOURCE"
+    # test-0 for ci pipeline build
