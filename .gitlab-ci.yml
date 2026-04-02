@@ -1,0 +1,20 @@
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+    - if: '$CI_COMMIT_BRANCH == "DEV"'
+    - if: '$CI_COMMIT_BRANCH == "UAT"'
+    - if: '$CI_COMMIT_BRANCH == "PROD"'
+    - if: '$CI_COMMIT_BRANCH'
+
+stages:
+  - test
+
+hello:
+  stage: test
+  script:
+    - echo "Pipeline is working!"
+    - echo "Branch = $CI_COMMIT_BRANCH"
+    - echo "SHA = $CI_COMMIT_SHA"
+    - echo "Source = $CI_PIPELINE_SOURCE"
