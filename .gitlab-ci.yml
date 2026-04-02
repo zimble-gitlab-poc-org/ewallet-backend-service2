@@ -20,3 +20,4 @@ hello:
     - echo "Source = $CI_PIPELINE_SOURCE"
     # test-0 for ci pipeline build
     # test-1 for ci pipeline build
+    # test-2 for ci pipeline build
