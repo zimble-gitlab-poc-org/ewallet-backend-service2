@@ -1,0 +1,9 @@
+name: Provision GitLab Mirror
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    uses: zimble-gitlab-poc-org/central-workflows/.github/workflows/provision-gitlab-mirror.yml@main
+    secrets: inherit
