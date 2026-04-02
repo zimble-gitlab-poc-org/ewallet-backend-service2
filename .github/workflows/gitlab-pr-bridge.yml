@@ -1,0 +1,16 @@
+name: GitLab CI Status Bridge
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+# statuses:write is required so the called workflow can post
+# commit statuses back to GitHub (used for branch protection).
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  bridge:
+    uses: zimble-gitlab-poc-org/central-workflows/.github/workflows/gitlab-pr-status.yml@main
+    secrets: inherit
